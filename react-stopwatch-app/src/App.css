@@ -1,0 +1,119 @@
+body {
+  font-family: 'arial', Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+min-height: 500px;
+  margin: 0;
+  background-color: #cbdbf6;
+}
+
+.stopwatch-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding:50px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: #020766;
+  margin-bottom: 20px;
+}
+
+.display {
+  font-size: 3rem;
+  font-family: 'Courier New', monospace;
+  margin:20px 0;
+  color: #000000;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin:20px 0;
+}
+
+.control-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-button:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.start {
+  background-color: #048827;
+  color: white;
+}
+
+.stop {
+  background-color: #c30404;
+  color: white;
+}
+
+.reset {
+  background-color: #e3a806;
+  color: white;
+}
+
+.lap {
+  background-color: #04a2a7;
+  color: #ffffff;
+}
+
+.laps-container {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.laps-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.lap-item:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .stopwatch-container {
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .display {
+    font-size: 2rem;
+  }
+  
+  .controls {
+    flex-wrap: wrap;
+  }
+  
+  .control-button {
+    flex: 1 1 40%;
+    margin-bottom: 10pxm;
+  }
+}
